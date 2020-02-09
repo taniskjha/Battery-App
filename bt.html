@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Battery Monitor</title>
+   
+    <!-- Styling Starts Here-->
+
+    <style>
+    /* Select All elements */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+}
+
+
+/* centering content  */
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Battery Structure */
+
+.battery {
+    height: 320px;
+    border: 2px solid black;
+    width: 150px;
+    border-radius: 15px;  
+    position: relative;
+    
+
+}
+
+/* After selector for tip of Battery */
+
+.battery::before {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 30px;
+    background: black;
+    right: 40px;
+    top: 321px;    
+    transform: translate(-50%, -50%);
+    /* border-top-right-radius: 5px;  */
+    border-bottom-right-radius: 5px;
+    /* border-top-left-radius: 5px;  */
+    border-bottom-left-radius: 5px;
+}
+
+.level {
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    height: 100%;
+    border-radius: 13px;
+
+
+}
+
+
+#text {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+    </style>
+
+    <!-- Styling ends here -->
+</head>
+<body>
+
+
+
+    <!-- Battery Outer  -->
+<div class="battery">
+
+    <!-- Battery Insider -->
+    <div class="level">
+    <!-- Battery text -->
+        <div id="text"></div>
+    </div>
+</div>
+
+
+
+    <!-- Adding Script -->
+
+    <script src="bt.js"></script>
+</body>
+</html>
